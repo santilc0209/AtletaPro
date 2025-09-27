@@ -1,0 +1,81 @@
+:root {
+  --register-bg: #0a0f1a;
+  --register-panel: #161b22;
+  --register-input: #23272f;
+  --register-accent: #2dd4bf;
+  --register-accent2: #ff7849;
+  --register-accent3: #e11d48;
+  --register-text: #f5f7fa;
+  --register-shadow: 0 8px 32px -8px rgba(45,212,191,.18);
+}
+
+body,
+.min-h-screen {
+  background: var(--register-bg);
+  color: var(--register-text);
+}
+
+.register-container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-form {
+  background: var(--register-panel);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: var(--register-shadow);
+  border: 1px solid #23272f;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.register-form h2 {
+  color: var(--register-accent2);
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.register-form input {
+  width: 100%;
+  margin-bottom: 1.2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: var(--register-input);
+  color: var(--register-text);
+  border: 2px solid var(--register-accent);
+  font-size: 1.1rem;
+  font-family: inherit;
+  transition: border .18s, box-shadow .18s;
+  box-shadow: 0 2px 8px #0001;
+}
+
+.register-form input:focus {
+  border: 2px solid var(--register-accent2);
+  outline: none;
+}
+
+.register-form button {
+  width: 100%;
+  padding: 0.9rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: linear-gradient(90deg, var(--register-accent2), var(--register-accent3));
+  color: #fff;
+  border: none;
+  box-shadow: 0 2px 8px #0001;
+  cursor: pointer;
+  transition: background .18s, transform .18s, box-shadow .18s;
+}
+
+.register-form button:hover {
+  background: linear-gradient(90deg, var(--register-accent3), var(--register-accent2));
+  transform: scale(1.04);
+  box-shadow: 0 8px 24px -8px var(--register-accent);
+}
