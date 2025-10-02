@@ -347,3 +347,37 @@ footer {
     will-change: transform, box-shadow;
   }
 }
+
+.mission-text,
+.vision-text,
+.card p,
+.member .role,
+.swatch .meta,
+footer,
+.hero p,
+h1, h2, h3, h4, h5, h6 {
+  color: #111 !important;
+}
+
+/* Sombra para títulos */
+h1, h2, h3, h4, h5, h6 {
+  text-shadow: 0 2px 8px #0002, 0 1px 0 #fff3;
+}
+
+/* Sombra para texto principal de tarjetas y secciones */
+.card p,
+.mission-text,
+.vision-text,
+.hero p {
+  text-shadow: 0 1px 4px #0001;
+}
+
+/* Sombra para botones */
+.cta {
+  box-shadow: 0 4px 16px -4px var(--ring), 0 1px 4px #0002;
+}
+
+/* Sombra para el equipo */
+.member {
+  box-shadow: 0 2px 8px #0002, 0 1px 4px #0001;
+}

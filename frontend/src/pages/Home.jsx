@@ -143,7 +143,7 @@ export default function Home() {
               />
               <path
                 d="M230 330 H455"
-                stroke="#e9edf3"
+                stroke="#090a0cff"
                 strokeWidth="40"
                 strokeLinecap="round"
               />
@@ -159,13 +159,13 @@ export default function Home() {
           <div className="grid cols-2" style={{ gap: 24 }}>
             <article className="card" style={{ borderRadius: 18, boxShadow: "0 4px 16px #0001", background: "white", padding: 24, transition: "transform 0.2s", cursor: "pointer" }}>
               <h2 style={{ color: "var(--c3)", fontWeight: 700 }}>🎯 Misión</h2>
-              <p>
+              <p className="mission-text" style={{ color: "#111", fontWeight: 500 }}>
                 Brindar a los atletas de alto rendimiento planes de entrenamiento y nutrición personalizados, basados en sus características físicas, su disciplina y sus objetivos, utilizando inteligencia artificial y análisis de datos para maximizar rendimiento y bienestar.
               </p>
             </article>
             <article className="card" style={{ borderRadius: 18, boxShadow: "0 4px 16px #0001", background: "white", padding: 24, transition: "transform 0.2s", cursor: "pointer" }}>
               <h2 style={{ color: "var(--c4)", fontWeight: 700 }}>👁️ Visión</h2>
-              <p>
+              <p className="vision-text" style={{ color: "#111", fontWeight: 500 }}>
                 Ser la plataforma líder en Latinoamérica para la optimización del rendimiento deportivo, reconocida por su innovación, efectividad y por impulsar el éxito de atletas en todas las disciplinas.
               </p>
             </article>
