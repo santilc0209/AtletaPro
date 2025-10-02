@@ -46,57 +46,6 @@ Plataforma para la gestión y optimización del rendimiento de atletas de alto n
    node server.js
    ```
 
-## Estructura del proyecto
-
-```
-GerenciaDeProyectosAtletaPro/
-├── backend/
-│   ├── db.js
-│   ├── server.js
-│   └── routes/
-│       ├── auth.js
-│       └── deportes.js
-├── frontend/
-│   ├── .gitignore
-│   ├── eslint.config.js
-│   ├── index.html
-│   ├── package.json
-│   ├── postcss.config.js
-│   ├── README.md
-│   ├── tailwind.config.js
-│   ├── vite.config.js
-│   ├── public/
-│   │   └── vite.svg
-│   └── src/
-│       ├── App.css
-│       ├── App.jsx
-│       ├── AuthContext.jsx
-│       ├── index.css
-│       ├── main.jsx
-│       ├── assets/
-│       │   └── react.svg
-│       ├── components/
-│       │   ├── BackButton.jsx
-│       │   ├── button.jsx
-│       │   ├── card.jsx
-│       │   ├── Navbar.jsx
-│       │   └── SportCard.jsx
-│       └── pages/
-│           ├── Dashboard.css
-│           ├── Dashboard.jsx
-│           ├── DeporteDetalle.jsx
-│           ├── Home.css
-│           ├── Home.jsx
-│           ├── login.jsx
-│           ├── PerfilUsuario.jsx
-│           ├── Register.css
-│           └── Register.jsx
-├── index.js
-├── node_modules/
-├── package-lock.json
-├── package.json
-```
-
 ## Tecnologías
 
 - React
