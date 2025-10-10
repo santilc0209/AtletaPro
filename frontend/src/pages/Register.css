@@ -1,46 +1,55 @@
 :root {
   --register-bg: #0a0f1a;
   --register-panel: #161b22;
-  --register-input: #23272f;
+  --register-input: #1e2530;
   --register-accent: #2dd4bf;
   --register-accent2: #ff7849;
   --register-accent3: #e11d48;
   --register-text: #f5f7fa;
-  --register-shadow: 0 8px 32px -8px rgba(45,212,191,.18);
+  --register-muted: #9ca3af;
+  --register-shadow: 0 12px 40px -12px rgba(45, 212, 191, 0.25);
 }
 
-body,
-.min-h-screen {
-  background: var(--register-bg);
-  color: var(--register-text);
-}
-
-.register-container {
-  min-height: 80vh;
+/* Página centrada y fondo con degradado */
+.register-page {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
+  background: radial-gradient(circle at 25% 20%, #0a0f1a 0%, #06090f 100%);
+  font-family: "Inter", "Poppins", sans-serif;
+  color: var(--register-text);
 }
 
-.register-form {
-  background: var(--register-panel);
-  padding: 2rem;
-  border-radius: 1.5rem;
-  box-shadow: var(--register-shadow);
-  border: 1px solid #23272f;
-  text-align: center;
+/* Contenedor principal */
+.register-wrapper {
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
+  padding: 1rem;
 }
 
+/* Caja del formulario */
+.register-form {
+  background: linear-gradient(145deg, #161b22, #1c2433);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: var(--register-shadow), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  border: none;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Título */
 .register-form h2 {
   color: var(--register-accent2);
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   font-weight: 800;
   margin-bottom: 2rem;
   letter-spacing: 1px;
+  text-shadow: 0 2px 10px rgba(255, 120, 73, 0.25);
 }
 
+/* Campos de entrada */
 .register-form input {
   width: 100%;
   margin-bottom: 1.2rem;
@@ -48,34 +57,83 @@ body,
   border-radius: 1rem;
   background: var(--register-input);
   color: var(--register-text);
-  border: 2px solid var(--register-accent);
-  font-size: 1.1rem;
+  border: 1px solid transparent;
+  font-size: 1rem;
   font-family: inherit;
-  transition: border .18s, box-shadow .18s;
-  box-shadow: 0 2px 8px #0001;
+  transition: all 0.25s ease;
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.4),
+    inset -2px -2px 6px rgba(255, 255, 255, 0.05);
+}
+
+.register-form input::placeholder {
+  color: var(--register-muted);
 }
 
 .register-form input:focus {
-  border: 2px solid var(--register-accent2);
+  border: 1px solid var(--register-accent);
   outline: none;
+  background: #1f2733;
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.25);
+  transform: scale(1.02);
 }
 
+/* Botón principal */
 .register-form button {
   width: 100%;
-  padding: 0.9rem;
+  padding: 1rem;
   border-radius: 1rem;
   font-weight: 700;
   font-size: 1.1rem;
   background: linear-gradient(90deg, var(--register-accent2), var(--register-accent3));
   color: #fff;
   border: none;
-  box-shadow: 0 2px 8px #0001;
   cursor: pointer;
-  transition: background .18s, transform .18s, box-shadow .18s;
+  box-shadow: 0 4px 20px -6px rgba(255, 120, 73, 0.4);
+  transition: all 0.25s ease;
 }
 
 .register-form button:hover {
   background: linear-gradient(90deg, var(--register-accent3), var(--register-accent2));
-  transform: scale(1.04);
-  box-shadow: 0 8px 24px -8px var(--register-accent);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 28px -10px rgba(255, 120, 73, 0.45);
+}
+
+.register-form button:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 12px -4px rgba(255, 120, 73, 0.3);
+}
+
+/* Caja de error */
+.error-box {
+  background: rgba(225, 29, 72, 0.12);
+  color: var(--register-accent3);
+  border: 1px solid rgba(225, 29, 72, 0.3);
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll minimalista */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--register-accent3);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--register-accent2);
 }

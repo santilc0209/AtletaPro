@@ -1,0 +1,72 @@
+.perfil-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0f1a, #161b22);
+  color: #fff;
+  padding: 40px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.perfil-container h1 {
+  font-size: 2rem;
+  color: #2dd4bf;
+  margin-bottom: 10px;
+}
+
+.perfil-container p {
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+.perfil-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.perfil-container input {
+  display: block;
+  margin: 15px 0;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  width: 300px;
+  font-size: 1rem;
+  background: #23272f;
+  color: #fff;
+  outline: none;
+}
+
+.perfil-container input:focus {
+  box-shadow: 0 0 0 2px #2dd4bf;
+}
+
+.perfil-container button {
+  padding: 12px 28px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  background: #2dd4bf;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.perfil-container button:hover {
+  background: #2563eb;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.mensaje-guardado {
+  margin-top: 20px;
+  color: #4ade80;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

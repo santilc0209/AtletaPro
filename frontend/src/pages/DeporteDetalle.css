@@ -1,0 +1,84 @@
+.deporte-detalle-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0f1a, #161b22);
+  color: #fff;
+  padding: 40px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.deporte-detalle-container h1 {
+  color: #2dd4bf;
+  margin-bottom: 15px;
+}
+
+.deporte-detalle-container img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(45, 212, 191, 0.3);
+}
+
+.deporte-detalle-container h2 {
+  color: #94a3b8;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* TABLAS DINÁMICAS */
+table {
+  width: 80%;
+  margin: 0 auto 30px auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+thead {
+  background: #2dd4bf;
+  color: #000;
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #2563eb;
+  font-size: 1rem;
+}
+
+tbody tr:nth-child(even) {
+  background: #23272f;
+}
+
+tbody tr:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+ul {
+  list-style: disc;
+  color: #cbd5e1;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* BOTÓN */
+.deporte-detalle-container button {
+  padding: 10px 24px;
+  border-radius: 10px;
+  border: none;
+  background: #2dd4bf;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.deporte-detalle-container button:hover {
+  background: #2563eb;
+  color: #fff;
+  transform: scale(1.05);
+}

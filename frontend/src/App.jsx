@@ -6,7 +6,8 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import DeporteDetalle from "./pages/DeporteDetalle";
-import PerfilUsuario from "./pages/PerfilUsuario"; // 👈 nuevo perfil
+import PerfilUsuario from "./pages/PerfilUsuario";
+import RutinaDiaria from "./pages/RutinaDiaria";
 
 // Componente para proteger rutas
 function PrivateRoute({ children }) {
@@ -32,12 +33,22 @@ function App() {
           }
         />
 
-        {/* RUTA PROTEGIDA: Perfil */}
+        {/* RUTA PROTEGIDA: PerfilUsuario */}
         <Route
-          path="/perfil"
+          path="/perfil-usuario"
           element={
             <PrivateRoute>
               <PerfilUsuario />
+            </PrivateRoute>
+          }
+        />
+
+        {/* RUTA PROTEGIDA: RutinaDiaria */}
+        <Route
+          path="/rutina-diaria"
+          element={
+            <PrivateRoute>
+              <RutinaDiaria />
             </PrivateRoute>
           }
         />
