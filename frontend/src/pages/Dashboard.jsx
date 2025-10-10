@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 
 const deportesData = [
-  { nombre: "Fútbol", descripcion: "Trabajo en equipo y resistencia.", imagen: "https://img.icons8.com/color/96/soccer-ball.png" },
+  { nombre: "Fútbol", descripcion: "Trabajo en equipo y resistencia.", imagen: "https://www.flaticon.es/icono-gratis/balon-de-futbol_53283" },
   { nombre: "Básquetbol", descripcion: "Juego rápido y dinámico.", imagen: "https://img.icons8.com/color/96/basketball.png" },
   { nombre: "Natación", descripcion: "Fuerza y técnica en el agua.", imagen: "https://img.icons8.com/color/96/swimming.png" },
   { nombre: "Tenis", descripcion: "Precisión, reflejos y estrategia.", imagen: "https://img.icons8.com/color/96/tennis.png" },
