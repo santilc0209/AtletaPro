@@ -1,28 +1,53 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 import logo from "../assets/Logo.png";
 
 const Home = () => {
+  const [status, setStatus] = useState(""); // Para mensajes de éxito/error
 
   useEffect(() => {
     // Smooth scroll para los enlaces internos
     const links = document.querySelectorAll('a[href^="#"]');
-    links.forEach(link => {
-      link.addEventListener('click', (e) => {
+    links.forEach((link) => {
+      link.addEventListener("click", (e) => {
         e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
-        if(target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const target = document.querySelector(link.getAttribute("href"));
+        if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
       });
     });
   }, []);
 
   const handleIngresar = () => {
-    window.location.href = "/login"; // Puedes cambiar a tu ruta de login/registro
+    window.location.href = "/login"; // Cambia a tu ruta de login/registro
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xdkdjoee", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: data,
+      });
+
+      if (response.ok) {
+        setStatus("Gracias por tu mensaje, te contactaremos pronto!");
+        form.reset();
+      } else {
+        setStatus("Oops! Hubo un problema al enviar el mensaje.");
+      }
+    } catch (error) {
+      setStatus("Error de red, por favor intenta de nuevo.");
+    }
   };
 
   return (
     <div className="home-container">
-
       {/* ===== NAVBAR ===== */}
       <header className="navbar">
         <div className="navbar-content">
@@ -36,6 +61,7 @@ const Home = () => {
               <li><a href="#mision">Misión</a></li>
               <li><a href="#servicios">Servicios</a></li>
               <li><a href="#equipo">Equipo</a></li>
+              <li><a href="#contacto">Contacto</a></li>
             </ul>
           </nav>
 
@@ -109,14 +135,26 @@ const Home = () => {
           <div className="team-card">
             <img src={logo} alt="Mario Testa" />
             <h3>Mario Testa</h3>
-            <p>Fundador/Nutricionista deportiva</p>
+            <p>Nutricionista deportiva</p>
           </div>
           <div className="team-card">
-            <img src={logo} alt="Juanda" />
-            <h3>Juanda</h3>
-            <p>/FundadorPsicólogo del deporte</p>
+            <img src={logo} alt="Juanda Pineda" />
+            <h3>Juanda Pineda</h3>
+            <p>Psicólogo del deporte</p>
           </div>
         </div>
+      </section>
+
+      {/* ===== CONTACTO ===== */}
+      <section id="contacto" className="section dark fade-up">
+        <h2>Contáctanos</h2>
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <input type="text" name="name" placeholder="Nombre completo" required />
+          <input type="email" name="email" placeholder="Correo electrónico" required />
+          <textarea name="message" placeholder="Tu mensaje" rows="4" required></textarea>
+          <button type="submit" className="btn-primary">Enviar</button>
+          {status && <p className="form-status">{status}</p>}
+        </form>
       </section>
 
       {/* ===== FOOTER ===== */}

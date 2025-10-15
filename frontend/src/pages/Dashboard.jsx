@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ChatBot from "./ChatBot"; // Asegúrate de que la ruta sea correcta
 import "./Dashboard.css";
 
 const deportesData = [
@@ -60,6 +61,9 @@ const Dashboard = () => {
           ))
         )}
       </div>
+
+      {/* ChatBot integrado */}
+      <ChatBot />
     </div>
   );
 };
